@@ -17,7 +17,7 @@ int check_cycle(listint_t *list)
 		list = list->next;
 		addr = addr->next->next;
 		if (addr == list)
-				return (1);
+			return (1);
 	}
 	return (0);
 }
