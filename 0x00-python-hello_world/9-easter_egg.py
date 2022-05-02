@@ -19,4 +19,4 @@ Although never is often better than *right* now.\n\
 If the implementation is hard to explain, it's a bad idea.\n\
 If the implementation is easy to explain, it may be a good idea.\n\
 Namespaces are one honking great idea -- let's do more of those!"
-print(str)
+print("{}".format(str))
