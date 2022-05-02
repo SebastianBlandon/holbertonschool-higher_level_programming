@@ -9,19 +9,15 @@
  */
 int check_cycle(listint_t *list)
 {
-	size_t i, j;
-	listint_t *addr = list, *head = list;
+	size_t i;
+	listint_t *addr = list;
 
-	for (i = 0; list; i++)
+	for (i = 0; list && addr && addr->next; i++)
 	{
-		addr = head;
-		for (j = 0; j < i; j++)
-		{
-			if (addr == list->next)
-				return (1);
-			addr = addr->next;
-		}
 		list = list->next;
+		addr = addr->next->next;
+		if (addr == list)
+				return (1);
 	}
 	return (0);
 }
