@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-print("The Zen of Python, by Tim Peters\n\n\
+str = "The Zen of Python, by Tim Peters\n\n\
 Beautiful is better than ugly.\n\
 Explicit is better than implicit.\n\
 Simple is better than complex.\n\
@@ -18,4 +18,5 @@ Now is better than never.\n\
 Although never is often better than *right* now.\n\
 If the implementation is hard to explain, it's a bad idea.\n\
 If the implementation is easy to explain, it may be a good idea.\n\
-Namespaces are one honking great idea -- let's do more of those!")
+Namespaces are one honking great idea -- let's do more of those!"
+print(str)
