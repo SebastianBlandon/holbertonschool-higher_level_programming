@@ -1,2 +1,6 @@
 #!/usr/bin/python3
-print("abcdefghijklmnopqrstuvwxyzguillaume", end="")
+letter = 'a'
+print(letter, end="")
+letter = letter + 1
+print(letter, end="")
+print("guillaume", end="")
