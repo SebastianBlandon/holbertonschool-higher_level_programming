@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-print(f"abcdefghijklmnopqrstuvwxyzguillaume", end="")
+print(f"abcdefghijklmnopqrstuvwxyz", end="")
