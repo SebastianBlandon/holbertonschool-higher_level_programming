@@ -2,4 +2,4 @@
 alphabet = 'abcdefghijklmnopqrstuvwxyz'
 for i in range(len(alphabet)):
     print(alphabet[i], end="")
-print("guillaume", end="")
+print(f"guillaume", end="")
