@@ -1,2 +1,4 @@
 #!/usr/bin/python3
-print(f"abcdefghijklmnopqrstuvwxyz", end="")
+alphabet = "abcdefghijklmnopqrstuvwxyz"
+for i in range(len(alphabet)):
+    print(alphabet[i], end="")
