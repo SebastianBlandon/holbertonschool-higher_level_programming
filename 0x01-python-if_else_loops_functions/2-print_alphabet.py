@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-letter = 'a'
-print(letter, end="")
-letter = letter + 1
-print(letter, end="")
+alphabet = 'abcdefghijklmnopqrstuvwxyz'
+for i in range(len(alphabet)):
+    print(alphabet[i], end="")
 print("guillaume", end="")
