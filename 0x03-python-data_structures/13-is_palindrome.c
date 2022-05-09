@@ -19,14 +19,14 @@ int is_palindrome(listint_t **head)
 
 	while (p->n != (*head)->n)
 	{
+		list_int[i] = (*head)->n;
+		i++;
+		p = p->next;
 		if (!p)
 		{
 			free(list_int);
 			return (0);
 		}
-		list_int[i] = (*head)->n;
-		i++;
-		p = p->next;
 		*head = (*head)->next;
 	}
 	list_int[i] = (*head)->n;
