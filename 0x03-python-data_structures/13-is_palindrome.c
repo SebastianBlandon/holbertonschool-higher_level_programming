@@ -12,7 +12,10 @@ int is_palindrome(listint_t **head)
 	int i = 0;
 
 	if (!*head || !head)
+	{
+		free(list_int);
 		return (1);
+	}
 
 	while (p->n != (*head)->n)
 	{
@@ -25,8 +28,12 @@ int is_palindrome(listint_t **head)
 	for (; i >= 0; i--)
 	{
 		if (list_int[i] != p->n)
+		{
+			free(list_int);
 			return (0);
+		}
 		p = p->next;
 	}
+	free(list_int);
 	return (1);
 }
