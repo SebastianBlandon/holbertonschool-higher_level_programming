@@ -22,7 +22,7 @@ int is_palindrome(listint_t **head)
 		if (!p)
 		{
 			free(list_int);
-			return (0)
+			return (0);
 		}
 		list_int[i] = (*head)->n;
 		i++;
