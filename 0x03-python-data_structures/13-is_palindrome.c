@@ -24,7 +24,7 @@ int is_palindrome(listint_t **head)
 	}
 	while ((p->n != (*head)->n))
 	{
-		if ((*head)->n == p->next->n)
+		if (p->next && (*head)->n == p->next->n)
 		{
 			case_odd = 1;
 			break;
