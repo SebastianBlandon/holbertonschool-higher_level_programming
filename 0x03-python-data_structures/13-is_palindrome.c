@@ -18,6 +18,11 @@ int is_palindrome(listint_t **head)
 	}
 
 	p = (*head)->next;
+	if (!p)
+	{
+		free(list_int);
+		return (0);
+	}
 	while (p->n != (*head)->n)
 	{
 		list_int[i] = (*head)->n;
