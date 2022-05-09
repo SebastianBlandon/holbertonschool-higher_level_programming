@@ -9,7 +9,7 @@ int is_palindrome(listint_t **head)
 {
 	listint_t *p;
 	int *list_int = malloc(1024 * sizeof(int));
-	int i = 0;
+	int i = 0, case_odd = 0;
 
 	if (!*head || !head)
 	{
@@ -23,8 +23,14 @@ int is_palindrome(listint_t **head)
 		free(list_int);
 		return (0);
 	}
-	while (p->n != (*head)->n)
+	while ((p->n != (*head)->n))
 	{
+		if ((*head)->n == p->next->n)
+		{
+			case_odd = 1;
+			break;
+		}
+		printf("p : %d, h : %d, p->next : %d\n", p->n, (*head)->n, p->next->n);
 		list_int[i] = (*head)->n;
 		i++;
 		p = p->next;
@@ -35,9 +41,12 @@ int is_palindrome(listint_t **head)
 		}
 		*head = (*head)->next;
 	}
+	if (case_odd)
+		p = p->next;
 	list_int[i] = (*head)->n;
 	for (; i >= 0; i--)
 	{
+		printf("p : %d, list : %d\n", p->n, list_int[i]);
 		if (!p)
 		{
 			free(list_int);
