@@ -30,7 +30,6 @@ int is_palindrome(listint_t **head)
 			case_odd = 1;
 			break;
 		}
-		printf("p : %d, h : %d, p->next : %d\n", p->n, (*head)->n, p->next->n);
 		list_int[i] = (*head)->n;
 		i++;
 		p = p->next;
@@ -46,7 +45,6 @@ int is_palindrome(listint_t **head)
 	list_int[i] = (*head)->n;
 	for (; i >= 0; i--)
 	{
-		printf("p : %d, list : %d\n", p->n, list_int[i]);
 		if (!p)
 		{
 			free(list_int);
