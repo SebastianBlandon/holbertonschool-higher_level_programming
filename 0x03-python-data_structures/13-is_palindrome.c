@@ -25,7 +25,7 @@ int is_palindrome(listint_t **head)
 		*head = (*head)->next;
 	}
 	list_int[i] = (*head)->n;
-	for (; i >= 0; i--)
+	for (; i >= 0 && p; i--)
 	{
 		if (list_int[i] != p->n)
 		{
