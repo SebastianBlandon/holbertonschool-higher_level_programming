@@ -7,7 +7,7 @@
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *p = (*head)->next;
+	listint_t *p;
 	int *list_int = malloc(1024 * sizeof(int));
 	int i = 0;
 
@@ -17,6 +17,7 @@ int is_palindrome(listint_t **head)
 		return (1);
 	}
 
+	p = (*head)->next;
 	while (p->n != (*head)->n)
 	{
 		list_int[i] = (*head)->n;
