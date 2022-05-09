@@ -11,7 +11,7 @@ int is_palindrome(listint_t **head)
 	int *list_int = malloc(1024 * sizeof(int));
 	int i = 0;
 
-	if (!*head)
+	if (!*head || !head)
 		return (1);
 
 	while (p->n != (*head)->n)
