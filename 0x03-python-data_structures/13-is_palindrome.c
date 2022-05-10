@@ -17,11 +17,6 @@ int is_palindrome(listint_t **head)
 		return (1);
 	}
 	p = (*head)->next;
-	if (!p)
-	{
-		free(list_int);
-		return (0);
-	}
 	while ((p->n != (*head)->n))
 	{
 		if (p->next && (*head)->n == p->next->n)
