@@ -11,7 +11,7 @@ int is_palindrome(listint_t **head)
 	int *list_int = malloc(1024 * sizeof(int));
 	int i = 0, case_odd = 0;
 
-	if (!*head || !head)
+	if (!*head || !head || !(*head)->next)
 	{
 		free(list_int);
 		return (1);
