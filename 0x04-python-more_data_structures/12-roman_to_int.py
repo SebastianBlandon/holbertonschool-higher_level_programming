@@ -24,12 +24,7 @@ def roman_to_int(roman_string):
             return int_value
     for i in range(len(int_string)):
         if (i < len(int_string) - 1 and int_string[i] < int_string[i + 1]):
-            if int_string[i] == 1 and int_string[i + 1] == 10:
-                int_value = int_string[i + 1] - int_string[i]
-            if int_string[i] == 10 and int_string[i + 1] == 100:
-                int_value = int_string[i + 1] - int_string[i]
-            if int_string[i] == 100 and int_string[i + 1] == 1000:
-                int_value = int_string[i + 1] - int_string[i]
+            int_value += int_string[i + 1] - int_string[i]
             flag = 1
         elif flag:
             flag = 0
