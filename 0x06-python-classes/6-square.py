@@ -56,7 +56,8 @@ class Square:
             value (int): value to set the self.__position variable
 
         """
-        if type(value) != tuple or len(value) != 2:
+        if type(value) != tuple or len(value) != 2 or \
+           not all([type(i) == int for i in value]):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
