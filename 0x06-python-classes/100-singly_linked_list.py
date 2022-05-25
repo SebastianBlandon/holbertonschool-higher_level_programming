@@ -3,6 +3,8 @@
 
     defines a node of a singly linked list
 """
+
+
 class Node:
     def __init__(self, data, next_node=None):
         self.data = data
@@ -28,10 +30,13 @@ class Node:
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
 
+
 """ This is the class Singly Linked List
 
     defines a singly linked list
 """
+
+
 class SinglyLinkedList:
     def __init__(self):
         self.__head = None
