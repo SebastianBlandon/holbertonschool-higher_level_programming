@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-import math
-
-
 """
 This is the "MagicClass"  module.
 
 This module provides a simple MagicClass class.
 """
+
+
+import math
 
 
 class MagicClass:
