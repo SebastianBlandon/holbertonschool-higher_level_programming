@@ -25,22 +25,22 @@ class Square:
         self.size = size
 
     def __eq__(self, other):
-        return self is other
+        return self.__size is other.size
 
     def __ne__(self, other):
-        return self is not other
+        return self.__size is not other.size
 
     def __le__(self, other):
-        return self <= other
+        return self.__size <= other.size
 
     def __lt__(self, other):
-        return self < other
+        return self.__size < other.size
 
     def __ge__(self, other):
-        return self >= other
+        return self.__size >= other.size
 
     def __gt__(self, other):
-        return self > other
+        return self.__size > other.size
 
     @property
     def size(self):
