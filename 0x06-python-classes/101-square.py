@@ -22,8 +22,7 @@ class Square:
         self.position = position
 
     def __repr__(self):
-        if self.my_print:
-            return str(self.my_print())
+        return self.my_print()
 
     @property
     def size(self):
@@ -80,14 +79,17 @@ class Square:
         """ Method for print a square with character #
 
         """
+        str_out = ""
         if not self.__size:
-            print()
+            return str_out
         else:
             for i in range(self.__position[1]):
-                print()
+                str_out += '\n'
             for i in range(self.__size):
-                for i in range(self.__position[0]):
-                    print(" ", end="")
-                for j in range(self.__size):
-                    print("#", end="")
-                print()
+                for j in range(self.__position[0]):
+                    str_out += " "
+                for k in range(self.__size):
+                    str_out += "#"
+                if i + 1 != self.__size:
+                    str_out += '\n'
+            return str_out
