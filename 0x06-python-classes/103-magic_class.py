@@ -12,9 +12,9 @@ class MagicClass:
 
     """
     def __init__(self, radius=0):
-        """ Method __init__ initializes the class Square
+        """ Method __init__ initializes the class MagicClass
             Args:
-                size (int): sets the private attribute
+                radius (int): sets the private attribute
 
             Return:
                 Nothing
@@ -24,7 +24,7 @@ class MagicClass:
         self.__radius = radius
 
     def area(self):
-        """ Method area calculates area of circunference given a radius
+        """ Method area calculates area of circumference given a radius
             Args:
                 Nothing
 
@@ -34,4 +34,7 @@ class MagicClass:
         return pow(self.__radius, 2) * math.pi
 
     def circumference(self):
+        """ Method for to calculate circumference of circle
+
+        """
         return 2 * math.pi * self.__radius
