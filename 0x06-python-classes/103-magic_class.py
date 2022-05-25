@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 import math
+
+
 """
 This is the "MagicClass"  module.
 
@@ -19,6 +21,7 @@ class MagicClass:
             Return:
                 Nothing
         """
+        self.__radius = 0
         if type(radius) != int or type(radius) is not float:
             raise TypeError("radius must be a number")
         self.__radius = radius
