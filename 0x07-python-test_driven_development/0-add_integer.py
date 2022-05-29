@@ -7,6 +7,8 @@
     a and b must be first casted to integers if they are float
     Return the add of two numbers, a and b
 """
+
+
 def add_integer(a, b=98):
     """ Funcion add_integer
         Args:
