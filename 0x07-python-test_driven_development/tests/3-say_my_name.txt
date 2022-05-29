@@ -1,0 +1,124 @@
+The ``3-say_my_name.py` module
+======================
+
+Using ``say_my_name``
+-------------------
+
+This is a text file in reStructuredText format.  First import
+``say_my_name`` from the ``3-say_my_name.py`` module:
+
+    >>> function = __import__("3-say_my_name").say_my_name
+
+Now use it:
+
+    >>> function()
+    Traceback (most recent call last):
+        ...
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+    >>> function("Johan")
+    My name is Johan 
+
+    >>> function("Johan", "Blandon")
+    My name is Johan Blandon
+
+    >>> function("Johan", -90)
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
+
+    >>> function(2, "Blandon")
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+    >>> function(float("inf"), 1)
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+    >>> function("1", float("inf"))
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
+
+    >>> function(10.7, lambda a: a)
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+    >>> function(lambda a: a, 10.7)
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+    >>> function(2.5, "12")
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+    >>> function("12", 2.5)
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
+
+    >>> function("12", "12")
+    My name is 12 12
+
+    >>> function((1, 2), 3)
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+    >>> function("(1, 2)", (3, 4))
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
+
+    >>> function(1, (2, 3))
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+    >>> function("None", 1)
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
+
+    >>> function(None, None)
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+    >>> function("1", None)
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
+
+    >>> function(True)
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+    >>> function("False")
+    My name is False 
+
+    >>> function(1, True)
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+    >>> function("1", False)
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
+
+    >>> function(True, True)
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+    >>> function("False", False)
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
