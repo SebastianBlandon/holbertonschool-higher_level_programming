@@ -1,0 +1,143 @@
+The ``5-text_indentation.py` module
+======================
+
+Using ``text_indentation``
+-------------------
+
+This is a text file in reStructuredText format.  First import
+``text_indentantion`` from the ``5-text_indentation.py`` module:
+
+    >>> function = __import__("5-text_indentation").text_indentation
+
+Now use it:
+
+    >>> function()
+    Traceback (most recent call last):
+        ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+    >>> function("Johan")
+    Johan
+
+    >>> function("Johan.Blandon")
+    Johan.
+    <BLANKLINE>
+    Blandon
+
+    >>> function("Jo?han.-9:0")
+    Jo?
+    <BLANKLINE>
+    han.
+    <BLANKLINE>
+    -9:
+    <BLANKLINE>
+    0
+
+    >>> function(2, "Blandon")
+    Traceback (most recent call last):
+        ...
+    TypeError: text_indentation() takes 1 positional argument but 2 were given
+
+    >>> function(float("inf"))
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+    >>> function("1")
+    1
+
+    >>> function(10.7)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+    >>> function(lambda a: a)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+    >>> function(2.5)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+    >>> function("1?2")
+    1?
+    <BLANKLINE>
+    2
+
+    >>> function(":12:")
+    :
+    <BLANKLINE>
+    12:
+    <BLANKLINE>
+
+    >>> function((1, 2))
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+    >>> function("(1?., 2:)")
+    (1?
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    , 2:
+    <BLANKLINE>
+    )
+
+    >>> function(1)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+    >>> function("No...ne")
+    No.
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    ne
+
+    >>> function(None)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+    >>> function("?1?")
+    ?
+    <BLANKLINE>
+    1?
+    <BLANKLINE>
+
+    >>> function(True)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+    >>> function("F:a:l:s:e")
+    F:
+    <BLANKLINE>
+    a:
+    <BLANKLINE>
+    l:
+    <BLANKLINE>
+    s:
+    <BLANKLINE>
+    e
+
+    >>> function(True)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+    >>> function(False)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+    >>> function(True, True)
+    Traceback (most recent call last):
+        ...
+    TypeError: text_indentation() takes 1 positional argument but 2 were given
