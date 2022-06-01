@@ -116,6 +116,10 @@ class Rectangle():
             return 0
         return 2 * self.__width + 2 * self.__height
 
+    @classmethod
+    def square(cls, size=0):
+        return cls(size, size)
+
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         if not isinstance(rect_1, Rectangle):
@@ -126,7 +130,3 @@ class Rectangle():
             return rect_1
         else:
             return rect_2
-
-    @classmethod
-    def square(cls, size=0):
-        return cls(size, size)
