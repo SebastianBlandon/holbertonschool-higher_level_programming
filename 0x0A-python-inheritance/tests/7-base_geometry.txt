@@ -36,3 +36,26 @@ Now use it:
     ... except Exception as e:
     ...     print("[{}] {}".format(e.__class__.__name__, e))
     [ValueError] distance must be greater than 0
+
+Test for type:
+    >>> def tested(tests=[]):
+    ...     for test in tests:
+    ...         try:
+    ...	            bg.integer_validator("value", test)
+    ...       	except Exception as e:
+    ...             print("[{}] {} for type {}".format(e.__class__.__name__, e, type(test)))
+
+    >>> tests = [True, 1.24, -76.87, set(), [1, 2], "a string", {"a":1}, ("11", 3), tested, bg, BaseGeometry, None]
+    >>> tested(tests)
+    [TypeError] value must be an integer for type <class 'bool'>
+    [TypeError] value must be an integer for type <class 'float'>
+    [TypeError] value must be an integer for type <class 'float'>
+    [TypeError] value must be an integer for type <class 'set'>
+    [TypeError] value must be an integer for type <class 'list'>
+    [TypeError] value must be an integer for type <class 'str'>
+    [TypeError] value must be an integer for type <class 'dict'>
+    [TypeError] value must be an integer for type <class 'tuple'>
+    [TypeError] value must be an integer for type <class 'function'>
+    [TypeError] value must be an integer for type <class '7-base_geometry.BaseGeometry'>
+    [TypeError] value must be an integer for type <class 'type'>
+    [TypeError] value must be an integer for type <class 'NoneType'>
