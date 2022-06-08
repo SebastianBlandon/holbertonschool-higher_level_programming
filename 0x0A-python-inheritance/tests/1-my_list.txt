@@ -1,0 +1,31 @@
+The ``1-my_list.py` module
+======================
+
+Using ``MyList``
+-------------------
+
+This is a text file in reStructuredText format.  First import
+``MyList`` from the ``1-my_list.py`` module:
+
+    >>> MyList = __import__("1-my_list").MyList
+
+Now use it:
+
+    >>> new_list = MyList()
+    >>> new_list
+    []
+
+    >>> new_list.append(90)
+    >>> new_list
+    [90]
+
+    >>> new_list.append(2)
+    >>> new_list
+    [90, 2]
+
+    >>> new_list.append(5)
+    >>> new_list
+    [90, 2, 5]
+
+    >>> new_list.print_sorted()
+    [2, 5, 90]
