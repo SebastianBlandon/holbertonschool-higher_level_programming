@@ -9,7 +9,6 @@ def to_json_string(my_obj):
     """ Function that returns the JSON representation of an object (string):
 
         Args:
-            filename (str): input str
-            text (str): input str
+            my_obj (class): input class
     """
     return json.dumps(my_obj)
