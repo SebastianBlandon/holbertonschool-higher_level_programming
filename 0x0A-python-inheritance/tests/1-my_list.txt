@@ -29,3 +29,12 @@ Now use it:
 
     >>> new_list.print_sorted()
     [2, 5, 90]
+
+    >>> new_list.append("str")
+    >>> new_list
+    [2, 5, 90, 'str']
+
+    >>> new_list.print_sorted()
+    Traceback (most recent call last):
+        ...
+    TypeError: unorderable types: str() < int()
