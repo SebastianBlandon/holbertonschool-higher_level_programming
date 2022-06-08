@@ -30,9 +30,17 @@ Now use it:
     >>> new_list.print_sorted()
     [2, 5, 90]
 
+    >>> new_list.append(0)
+    >>> new_list.append(-5)
+    >>> new_list
+    [90, 2, 5, 0, -5]
+
+    >>> new_list.print_sorted()
+    [-5, 0, 2, 5, 90]
+
     >>> new_list.append("str")
     >>> new_list
-    [90, 2, 5, 'str']
+    [90, 2, 5, 0, -5, 'str']
 
     >>> new_list.print_sorted()
     Traceback (most recent call last):
