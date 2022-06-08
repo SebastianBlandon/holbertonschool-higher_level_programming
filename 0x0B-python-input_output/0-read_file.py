@@ -10,6 +10,6 @@ def read_file(filename=""):
         Args:
             file (file with str): input file
     """
-    f = open(filename, 'r', encoding="utf-8")
-    print(f.read(), end='')
+    with open(filename, 'r', encoding="utf-8") as f:
+        print(f.read(), end='')
     f.close()
