@@ -46,3 +46,24 @@ Now use it:
     Traceback (most recent call last):
         ...
     TypeError: '<' not supported between instances of 'str' and 'int'
+
+    >>> other_list = MyList()
+    >>> other_list.append(0)
+    >>> other_list.append(-2)
+    >>> other_list.append(6)
+    >>> other_list.append(-4)
+    >>> other_list
+    [0, -2, 6, -4]
+
+    >>> other_list.print_sorted()
+    [-4, -2, 0, 6]
+
+    >>> other_list.append(10)
+    >>> other_list.append(200)
+    >>> other_list.append(70)
+    >>> other_list.append(7)
+    >>> other_list
+    [0, -2, 6, -4, 10, 200, 70, 7]
+
+    >>> other_list.print_sorted()
+    [-4, -2, 0, 6, 7, 10, 70, 200]
