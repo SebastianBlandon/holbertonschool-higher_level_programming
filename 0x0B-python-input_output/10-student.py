@@ -18,13 +18,11 @@ class Student():
 
     def to_json(self, attrs=None):
         if attrs:
-            if all(attrs) is str:
-                output = {}
-                for i in attrs:
-                    for j in self.properties():
-                        if j is i:
-                            output[j] = self.__getattribute__(i)
-                return output
-            return self.__dict__
+            output = {}
+            for i in attrs:
+                for j in self.properties():
+                    if j is i:
+                        output[j] = self.__getattribute__(i)
+            return output
         else:
             return self.__dict__
