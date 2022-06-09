@@ -25,5 +25,6 @@ class Student():
                         if j is i:
                             output[j] = self.__getattribute__(i)
                 return output
+            return self.__dict__
         else:
             return self.__dict__
