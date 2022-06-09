@@ -17,12 +17,14 @@ class Student():
         return [i for i in self.__dict__.keys() if i[:1] != '_']
 
     def to_json(self, attrs=None):
-        if attrs:
-            output = {}
+        output = {}
+        if attrs is None:
+            return self.__dict__
+        if not attrs is None:
             for i in attrs:
                 for j in self.properties():
                     if j is i:
                         output[j] = self.__getattribute__(i)
             return output
         else:
-            return self.__dict__
+            return output
