@@ -17,10 +17,6 @@ class Student():
         return [i for i in self.__dict__.keys() if i[:1] != '_']
 
     def to_json(self, attrs=None):
-        if not type(attrs) is list:
-            return self.__dict__
-        if not all(type(item) is str for item in attrs):
-            return self.__dict__
         if attrs:
             output = {}
             for i in attrs:
