@@ -2,6 +2,7 @@
 """
     Function pascal_triangle(n)
 """
+import math
 from math import factorial as fact
 
 
