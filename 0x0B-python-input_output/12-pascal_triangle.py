@@ -6,7 +6,7 @@
 
 def fact(num):
     if num < 0:
-        print("Factorial of negative num does not exist")
+        return
 
     elif num == 0:
         return 1
