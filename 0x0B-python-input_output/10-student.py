@@ -20,7 +20,7 @@ class Student():
         output = {}
         if attrs is None:
             return self.__dict__
-        if not attrs is None:
+        if attrs is not None:
             for i in attrs:
                 for j in self.properties():
                     if j is i:
