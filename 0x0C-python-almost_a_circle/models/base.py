@@ -65,3 +65,30 @@ class Base():
                 return list_out
         except Exception:
             return list_out
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """ Save To File Method """
+        if list_objs is None:
+            return []
+        filename = cls.__name__ + ".csv"
+        list_out = []
+        for obj in list_objs:
+            _dict_ = obj.to_dictionary()
+            list_out.append(_dict_)
+        with open(filename, "w", encoding="utf-8") as f:
+            f.write(cls.to_json_string(list_out))
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """ Load From File Method """
+        filename = cls.__name__ + ".csv"
+        list_out = []
+        try:
+            with open(filename, "r") as f:
+                list_obj = cls.from_json_string(f.read())
+                for _dict_ in list_obj:
+                    list_out.append(cls.create(**_dict_))
+                return list_out
+        except Exception:
+            return list_out
