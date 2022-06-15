@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ 1.Class Base """
 import json
+import turtle as t
 
 
 class Base():
@@ -91,3 +92,48 @@ class Base():
                 return list_out
         except Exception:
             return list_out
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """ Draw Method """
+        colors = ["purple", "red", "blue", "green", "yellow", "white"]
+        index = 0
+        t.bgcolor("gray")
+        for obj in list_rectangles:
+            t.color(colors[index])
+            t.up()
+            t.fd(obj.x)
+            t.rt(90)
+            t.fd(obj.y)
+            t.lt(90)
+            t.pendown()
+            t.fd(obj.width)
+            t.rt(90)
+            t.fd(obj.height)
+            t.rt(90)
+            t.fd(obj.width)
+            t.rt(90)
+            t.fd(obj.height)
+            t.up()
+            t.home()
+            index += 1
+        for obj in list_squares:
+            t.color(colors[index])
+            t.up()
+            t.fd(obj.x)
+            t.rt(90)
+            t.fd(obj.y)
+            t.lt(90)
+            t.pendown()
+            t.fd(obj.width)
+            t.rt(90)
+            t.fd(obj.height)
+            t.rt(90)
+            t.fd(obj.width)
+            t.rt(90)
+            t.fd(obj.height)
+            t.up()
+            t.home()
+            index += 1
+        t.color("black")
+        t.done()
