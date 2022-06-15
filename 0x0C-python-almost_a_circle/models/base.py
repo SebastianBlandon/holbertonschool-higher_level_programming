@@ -25,13 +25,12 @@ class Base():
     @classmethod
     def save_to_file(cls, list_objs):
         """ Save To File Method """
-        if list_objs is None:
-            return []
         filename = cls.__name__ + ".json"
         list_out = []
-        for obj in list_objs:
-            _dict_ = obj.to_dictionary()
-            list_out.append(_dict_)
+        if list_objs is not None:
+            for obj in list_objs:
+                _dict_ = obj.to_dictionary()
+                list_out.append(_dict_)
         with open(filename, "w", encoding="utf-8") as f:
             f.write(cls.to_json_string(list_out))
 
@@ -92,3 +91,6 @@ class Base():
                 return list_out
         except Exception:
             return list_out
+
+    #@staticmethod
+    #def draw(list_rectangles, list_squares):
