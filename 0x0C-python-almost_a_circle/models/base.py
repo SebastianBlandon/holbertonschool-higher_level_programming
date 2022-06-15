@@ -91,6 +91,3 @@ class Base():
                 return list_out
         except Exception:
             return list_out
-
-    #@staticmethod
-    #def draw(list_rectangles, list_squares):
