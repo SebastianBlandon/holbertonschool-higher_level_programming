@@ -1,5 +1,4 @@
--- script that lists all rows of the table first_table from the database hbtn_0c_0 in your MySQL server.
-
+-- script that lists all records of the table second_table of the database hbtn_0c_0 in your MySQL server.
 -- SQL introduction project
 SELECT score, name
 FROM second_table
