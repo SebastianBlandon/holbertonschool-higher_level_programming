@@ -1,0 +1,6 @@
+-- script that lists all cities contained in the database hbtn_0d_usa. 
+-- SQL introduction project
+SELECT cities.id, cities.name, states.name
+FROM cities
+LEFT JOIN states
+ON states.id = cities.state_id;
