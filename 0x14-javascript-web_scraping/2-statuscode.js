@@ -1,11 +1,17 @@
 #!/usr/bin/env node
 const url = process.argv[2];
-const request = require('request');
+const axios = require('axios').default;
 
-request(url, function (error, response) {
-  if (error) {
-    console.log(error);
-  } else {
-    console.log(`code: ${response.statusCode}`);
-  }
-});
+// Make a request for a user with a given ID
+axios.get(url)
+  .then(function (response) {
+    // handle success
+    console.log('code:', response.status);
+  })
+  .catch(function (error) {
+    // handle error
+    console.log('code: 404');
+  })
+  .then(function () {
+    // always executed
+  });
