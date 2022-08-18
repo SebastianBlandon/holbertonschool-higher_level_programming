@@ -10,7 +10,7 @@ axios.get(url)
   })
   .catch(function (error) {
     // handle error
-    console.log('code: 404');
+    console.log('code: ' + error.response.status);
   })
   .then(function () {
     // always executed
