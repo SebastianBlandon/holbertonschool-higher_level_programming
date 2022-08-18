@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 const url = process.argv[2];
 const axios = require('axios').default;
 
