@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 # Get all states
-# Write a script that lists all states from the database hbtn_0e_0_usa:
+# Write a script that lists all states
+# from the database hbtn_0e_0_usa:
 import sys
 import MySQLdb
 
