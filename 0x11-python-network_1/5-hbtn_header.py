@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    What's my status? #1
+    Response header value #1
 """
 import requests
 from sys import argv
