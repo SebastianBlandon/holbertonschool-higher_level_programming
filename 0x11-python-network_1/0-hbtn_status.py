@@ -3,7 +3,7 @@
     What's my status? #0
 """
 
-if __name__=="__main__":
+if __name__ == "__main__":
     import urllib.request
 
     r = urllib.request.Request('https://intranet.hbtn.io/status')
