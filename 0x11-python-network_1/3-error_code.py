@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    POST an email #0
+     Error code #0
 """
 from sys import argv
 
