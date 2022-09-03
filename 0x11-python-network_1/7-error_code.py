@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    Response header value #1
+    Error code #1
 """
 import requests
 from sys import argv
